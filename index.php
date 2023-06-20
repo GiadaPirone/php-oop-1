@@ -11,21 +11,28 @@
         class Movie{
             public $titolo;
             public $cast;
+            public $durata;
+            public $regista;
 
-            public function durataFilm($ora){
-                if ($ora > 2){
-                    echo "Il film durerà più di due ore!"
-                }
+            public function __construct($titolo, $durata)
+            {
+                $this->titolo = $titolo;
+                $this->durata = $durata;
             }
+
+            
         }
 
-        $durata = new Movie();
-        $durata -> durataFilm(2);
+        // istanzio oggetto di tipo Movie.
+        $mioFilmPreferito = new Movie ("il Pianista Sull'Oceano", 3);
 
-
-        $regista = new movie();
+        echo "<h2>var dump scheda nuovo Movie</h2>";
+        var_dump($mioFilmPreferito);
+        
 
 
     ?>
+
+    <!-- <h1>ciao</h1> -->
 </body>
 </html>
