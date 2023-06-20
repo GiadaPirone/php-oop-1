@@ -8,6 +8,14 @@
 <body>
     <?php
 
+        class Genere{
+            public $nome;
+            
+            public function __construct($nome,)
+            {
+                $this->nome = $nome;
+            }
+        }
         class Movie{
             public $titolo;
             public $cast;
@@ -20,18 +28,24 @@
                 $this->durata = $durata;
             }
 
-           
 
+            public function getInfo() {
+                return "durata film:" . $this->durata ." ore "."titolo:". $this->titolo;
+
+            }
 
         }
 
         // istanzio oggetto di tipo Movie.
         $mioFilmPreferito = new Movie ("il Pianista Sull'Oceano", 3);
+        echo $mioFilmPreferito -> getInfo();
 
+        $nuovaUscita = new Movie ("l'avvocato del Diavolo", 2 , );
+        
         echo "<h2>var dump scheda nuovo Movie</h2>";
         var_dump($mioFilmPreferito);
 
-        
+        $horror = new Genere("horror");
 
 
     ?>
