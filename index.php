@@ -12,7 +12,7 @@
             public $titolo;
             public $cast;
             public $durata;
-            public $regista;
+            public $regista = "Fellini";
 
             public function __construct($titolo, $durata)
             {
@@ -20,7 +20,9 @@
                 $this->durata = $durata;
             }
 
-            
+           
+
+
         }
 
         // istanzio oggetto di tipo Movie.
@@ -28,6 +30,7 @@
 
         echo "<h2>var dump scheda nuovo Movie</h2>";
         var_dump($mioFilmPreferito);
+
         
 
 
